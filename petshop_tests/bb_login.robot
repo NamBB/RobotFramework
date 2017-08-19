@@ -8,9 +8,9 @@ Library           Selenium2Library
 *** Variables ***
 ${SERVER}		localhost:7272
 ${LOGIN_URL}	http://${SERVER}
-${BROWSER}		internetexplorer
+${BROWSER}		chrome
 ${WELCOME_URL}	http://${SERVER}/welcome.html
-	
+
 *** Keywords ***
 Open Browser To Login Page
 
@@ -25,7 +25,7 @@ Submit Credentials
 
 Welcome Page Should Be Open
 	Location Should Be	${WELCOME_URL}
-	
+
 *** Test Cases ***
 Valid Login
     Open Browser To Login Page
